@@ -65,12 +65,12 @@ public class VocabularyFragment extends Fragment {
 
             for (int i = 0; i < countWord; i++){
                 Word w = new Word();
-                data = bufferedReader.readLine(); w.setWord(data);
-                data = bufferedReader.readLine(); w.setPron(data);
-                data = bufferedReader.readLine(); w.setMean(data);
-                data = bufferedReader.readLine(); w.setMeanEx(data);
-                data = bufferedReader.readLine(); w.setExamp(data);
-                data = bufferedReader.readLine(); w.setExampEx(data);
+                data = bufferedReader.readLine(); w.set("word", data);
+                data = bufferedReader.readLine(); w.set("pron", data);
+                data = bufferedReader.readLine(); w.set("mean", data);
+                data = bufferedReader.readLine(); w.set("meanex", data);
+                data = bufferedReader.readLine(); w.set("examp", data);
+                data = bufferedReader.readLine(); w.set("exampex", data);
                 words.add(w);
             }
         } catch (IOException e) {
