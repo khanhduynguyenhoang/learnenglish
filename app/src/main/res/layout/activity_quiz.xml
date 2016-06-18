@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nguyenhoang.khanhduy.letslearnenglish.QuizActivity">
+
+    <TextView
+        android:id="@+id/tv_point"
+        android:textSize="20dp"
+        android:text="50 điểm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_progress"
+        android:textSize="20dp"
+        android:text="Câu 1/20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:background="@drawable/back"
+        android:layout_marginTop="50dp"
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/tv_point"
+        android:text="What is the most important rule in the world?"
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            style="@style/OptionStyle"
+            android:id="@+id/btn_option1"
+             />
+        <Button
+            android:id="@+id/btn_option2"
+            style="@style/OptionStyle"
+             />
+        <Button
+            android:id="@+id/btn_option3"
+            style="@style/OptionStyle"
+             />
+        <Button
+            android:id="@+id/btn_option4"
+            style="@style/OptionStyle"
+             />
+    </LinearLayout>
+</RelativeLayout>

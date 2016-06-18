@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/cat_voca"
+            style="@style/Catergory"
+            android:src="@drawable/voca"
+            />
+
+        <ImageButton
+            android:id="@+id/cat_dict"
+            style="@style/Catergory"
+            android:src="@drawable/dict"
+            />
+        <ImageButton
+            android:id="@+id/cat_toeic"
+            style="@style/Catergory"
+            android:src="@drawable/toeic"
+            />
+
+        <ImageButton
+            android:id="@+id/cat_translate"
+            style="@style/Catergory"
+            android:src="@drawable/translate"
+            />
+
+    </LinearLayout>
+</ScrollView>

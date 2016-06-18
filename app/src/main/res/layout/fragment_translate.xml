@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <TableLayout
+            android:stretchColumns="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <Spinner
+                    android:id="@+id/translate_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                </Spinner>
+                <Button
+                    android:id="@+id/btn_translate"
+                    android:text="Dịch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:textSize="16sp"
+            android:text="Nội dung văn bản gốc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TableLayout
+            android:stretchColumns="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:scrollHorizontally="false"
+                android:id="@+id/edit_text_to_translate"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:background="#DBECEC"
+                android:layout_margin="4dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:textSize="16sp"
+                android:text="Kết quả"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:id="@+id/edit_text_translated"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:background="#DBECEC"
+                android:layout_margin="4dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

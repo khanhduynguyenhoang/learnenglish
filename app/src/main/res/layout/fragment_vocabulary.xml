@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="8dp"
+    android:id="@+id/ll"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_word"
+        android:layout_marginTop="10dp"
+        android:textColor="#000088"
+        android:textSize="34sp"
+        android:layout_gravity="center"
+        android:text="kick /28: [v]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_pronounce"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/wrongAnswer"
+        android:textSize="34sp"
+        android:layout_gravity="center"
+        android:text="kick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_meaning"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:text="A person who is not a member of the armed forces, or police, or fire-fighting forces."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_meaning_explain"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text="( Người không phải là thành phần của các lực lượng vũ trang, hoặc cảnh sát, hoặc lực lượng cứu hỏa.)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_examp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/border_color"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:text="Eight of the passengers were soldiers, and one was a marine; the rest were civilians"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_examp_explain"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text="( Tám hành khách là lính, 1 người là lính thủy, số còn lại là những thường dân.)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
