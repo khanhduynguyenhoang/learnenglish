@@ -1,0 +1,3 @@
+# Learning English Application
+This is a small application written when learning Mobile developing at school <br>
+Android application for learning english (dictionary, translating, taking english tests...
