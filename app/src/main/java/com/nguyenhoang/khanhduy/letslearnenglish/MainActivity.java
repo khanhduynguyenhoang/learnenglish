@@ -29,9 +29,7 @@ public class MainActivity extends ActionBarActivity {
     private String lastTitle;
     int curPos = 0;
 
-    String[] osArray = {"Trang chủ", "Học từ vựng", "Từ điển",
-            "Trắc nghiệm TOEIC", "Dịch văn bản", "Giới thiệu"};
-    ArrayList<Fragment> sampleFragment = new ArrayList<Fragment>();
+    FragmentFactory fragmentFactory;
 
     ArrayList<String> arrList = new ArrayList<String>();
 
@@ -67,15 +65,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void loadDrawerData() {
-        for (int i = 0; i < 6; i++)
-            arrList.add(osArray[i]);
+        fragmentFactory = new FragmentFactory();
 
-        sampleFragment.add(new MainFragment());
-        sampleFragment.add(new VocabularyFragment());
-        sampleFragment.add(new DictionaryFragment());
-        sampleFragment.add(new TestChooserFragment());
-        sampleFragment.add(new TranslateFragment());
-        sampleFragment.add(new AboutMeFragment());
+        for (int i = 0; i < 6; i++)
+            arrList.add(fragmentFactory.getFragmentName(i));
     }
 
     private void addDrawerItems() {
@@ -96,7 +89,7 @@ public class MainActivity extends ActionBarActivity {
     public void selectItem(int position) {
 
         Fragment frag = null;
-        frag = sampleFragment.get(position);
+        frag = fragmentFactory.getFragment(position);
 
         if (frag == null)
             return;
