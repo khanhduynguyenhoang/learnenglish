@@ -3,6 +3,7 @@ package com.nguyenhoang.khanhduy.letslearnenglish;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,11 +29,24 @@ public class QuizActivity extends AppCompatActivity {
     int point = 0;
     MediaPlayer mpCorrect = null;
     private MediaPlayer mpWrong = null;
+    int remainTime = 300;
 
     //views
-    private TextView tvPoint, tvProgress, tvQuestion;
+    private TextView tvPoint, tvProgress, tvQuestion, tvTime;
     ArrayList<Button> btns = new ArrayList<Button>();
 
+    CountDownTimer myTimer = new CountDownTimer(300000, 1000){
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            updateTimer(0);
+        }
+
+        @Override
+        public void onFinish() {
+            endGame();
+        }
+    };
 
     public void onBackPressed() {
         super.onBackPressed();
@@ -53,12 +67,23 @@ public class QuizActivity extends AppCompatActivity {
 
         //game start here
         showCurrentQuestion();
+
+        myTimer.start();
+    }
+
+    private void updateTimer(Integer value) {
+        remainTime -= 1;
+        tvTime.setText(remainTime + " s");
+        if (remainTime <= 0)
+            endGame();
     }
 
     private void loadWidgets() {
         tvPoint = (TextView)findViewById(R.id.tv_point);
         tvProgress = (TextView)findViewById(R.id.tv_progress);
         tvQuestion = (TextView)findViewById(R.id.tv_question);
+        tvTime = (TextView)findViewById(R.id.tv_time);
+
         Button a = (Button)findViewById(R.id.btn_option1); btns.add(a);
         Button b = (Button)findViewById(R.id.btn_option2); btns.add(b);
         Button c = (Button)findViewById(R.id.btn_option3); btns.add(c);

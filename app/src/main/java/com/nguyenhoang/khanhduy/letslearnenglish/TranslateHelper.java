@@ -36,7 +36,7 @@ public class TranslateHelper {
         if (type == CAMBRIDGE_API)
             myTranslater = new CambridgeTranslater(myContext);
         if (type == VIETDICT_API)
-            myTranslater = new VietdictTranslater(myContext);
+            myTranslater = new DummyTranslaterEngVie(myContext);
     }
 
 

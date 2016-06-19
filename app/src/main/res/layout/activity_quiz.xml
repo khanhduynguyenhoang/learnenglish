@@ -15,6 +15,15 @@
         android:text="50 điểm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_time"
+        android:textSize="20dp"
+        android:text="300 s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:layout_alignParentRight="true"
         android:id="@+id/tv_progress"

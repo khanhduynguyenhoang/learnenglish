@@ -19,9 +19,9 @@ public class DummyTranslaterEngVie extends WordTranslater {
     @Override
     public String translate(String word) {
 
-        String ClientId = myContext.getResources().getString(R.string.client_id);
+        String ClientId = "DoAn72Hours";
         Translate.setClientId(ClientId);
-        String ClientSecret = myContext.getResources().getString(R.string.client_secret);
+        String ClientSecret = "MbUQJxHf9nwa2jRS+e+FTzdelVkeOTPs0c2jfbzRclQ=";
         Translate.setClientSecret(ClientSecret);
 
         Language from = Language.ENGLISH;
